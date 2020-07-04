@@ -5,16 +5,16 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="shake.css">
 
 
     <style>
         .glow {
-  font-size: 27px;
+  font-size: 30px;
   color: blue;
   position: absolute;
-  top:10px;
-  left: 300px;
+  top:20px;
+  left: 350px;
  
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -106,7 +106,7 @@ p{
 }
 #grad1{
   height: 1500px;
-  width:800px;
+  background-color: red;
   background-image: linear-gradient(to right,#3A1C71,
 #D76D77,
 #FFAF7B); 
@@ -141,7 +141,7 @@ p{
     <input type="text" class="form-control" id="input3" name="INPUT3">
   </div>
   <div class="form-group">
-    <label for="input4">4) Are physically active?</label>
+    <label for="input4">4) Are you having a poor lifestyle?</label>
     <input type="text" class="form-control" id="input4" name="INPUT4">
   </div>
   <div class="form-group">
@@ -156,7 +156,7 @@ p{
     <label for="input7">7) Are you feeling nauseous in closed environments?</label>
     <input type="text" class="form-control" id="input7" name="INPUT7">
   </div>
-  <p>*This disclaimer claims that the result evaluated is not intended or implied to be a substitute for professional medical advice, diagnosis or treatment.</p>
+  <p>This disclaimer provides that the result evaluated is not intended or implied to be a substitute for professional medical advice, diagnosis or treatment.</p>
   <div class="text-center">
   <button type="button" class="btn btn-primary" id="button" onclick=calculate()>Assess</button></div><br><br>
    <div class="alert alert-success" role="alert" id="al1"></div>
@@ -183,7 +183,7 @@ p{
  
 
                 var result = 0;
-               if(input1==="Yes")
+               if(input1=="Yes")
                 result+=15;
                if(input2=="Yes")
                 result+=25;
