@@ -7,17 +7,16 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="shake.css">
 
 
     <style>
         .glow {
-  font-size: 20px;
+  font-size: 35px;
   color: blue;
   position: absolute;
   top:20px;
-  left: 390px;
-
+  left: 192px;
  
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -47,6 +46,9 @@ button{
 }
 body {
   
+
+
+  
   font-family: 'Arial', sans-serif;
   align-items: center;
   font-size: 15px;
@@ -57,7 +59,7 @@ body {
   background-color: white;
   width: 860px;
   height: 1000px;
-  top:200px;
+  top:170px;
   position: relative;
   border-radius: 15px;
  
@@ -68,7 +70,7 @@ body {
   bottom: 10px;
 }
 
-.form-control {
+.form-control {a
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
@@ -98,19 +100,19 @@ h3{
    padding: 10px;
 
 }
-#grad1{
-  height: 1600px;
-     width:1000px;
-  background-color: red;
-  background-image: linear-gradient(to right,#3A1C71,
-#D76D77,
-#FFAF7B); 
-}
 p{
   text-align: left;
   color: red;
   font-family: "verdana";
 
+}
+#grad1{
+  height: 1600px;
+    width: 1000px;
+  background-color: red;
+  background-image: linear-gradient(to right,#3A1C71,
+#D76D77,
+#FFAF7B); 
 }
 
     </style>
@@ -121,12 +123,14 @@ p{
 <body>
   <div id="grad1">
     <h1 class="glow">TEST YOURSELF FOR DIABETES</h1>
+   
 
    
     <h2 id="answer"></h2>
     <div class="container">
     <form name="f" action="GET" >
         <center><h3>Form fields can accept "Yes" or "No" only</h3></center>
+         
   <div class="form-group">
     <label for="input1">1) Any history of diabetes prevalent in the family?</label>
     <input type="text" name="INPUT1" class="form-control" id="input1" />
