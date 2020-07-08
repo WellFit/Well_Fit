@@ -5,15 +5,15 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="shake.css">
 
 
     <style>
         .glow {
-  font-size: 25px;
+  font-size: 35px;
   color: blue;
   position: absolute;
-  top:25px;
+  top:20px;
   left: 192px;
  
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -43,6 +43,7 @@ button{
   padding: 20px;
 }
 body {
+  
 
 
   
@@ -56,7 +57,7 @@ body {
   background-color: white;
   width: 860px;
   height: 1000px;
-  top:200px;
+  top:170px;
   position: relative;
   border-radius: 15px;
  
@@ -67,7 +68,7 @@ body {
   bottom: 10px;
 }
 
-.form-control {
+.form-control {a
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
@@ -104,8 +105,8 @@ p{
 
 }
 #grad1{
-  height: 1550px;
-     width:930px;
+  height: 1600px;
+    width: 1000px;
   background-color: red;
   background-image: linear-gradient(to right,#3A1C71,
 #D76D77,
@@ -119,42 +120,44 @@ p{
 
 <body>
   <div id="grad1">
-    <h2 class="glow">TEST YOURSELF FOR HORMONAL IMBALANCE</h2>
+    <h1 class="glow">TEST YOURSELF FOR HYPERTENSION</h1>
+   
 
    
     <h2 id="answer"></h2>
     <div class="container">
     <form name="f" action="GET" >
         <center><h3>Form fields can accept "Yes" or "No" only</h3></center>
+         
   <div class="form-group">
-    <label for="input1">1) Are you having a sensation of being bloated in your body?</label>
+    <label for="input1">1) Any history of hypertension prevalent in the family?</label>
     <input type="text" name="INPUT1" class="form-control" id="input1" />
   </div>
   <div class="form-group">
-    <label for="input2">2) Are you facing any irregularity in your menstrual cycle?</label>
+    <label for="input2">2) Are you experiencing severe headache frequently?</label>
     <input type="text" class="form-control" id="input2" name="INPUT2">
   </div>
   <div class="form-group">
-    <label for="input3">3) Are you suddenly gaining or losing weight?</label>
+    <label for="input3">3) Do you consume alcohol or smoke?</label>
     <input type="text" class="form-control" id="input3" name="INPUT3">
   </div>
   <div class="form-group">
-    <label for="input4">4) Are you encountering acne or pimples just before your period cycle?</label>
+    <label for="input4">4) Are you physically active(ie:exercise,work environment)?</label>
     <input type="text" class="form-control" id="input4" name="INPUT4">
   </div>
   <div class="form-group">
-    <label for="input5">5) Are you experiencing any spotting or pain during menstrual cycle?</label>
+    <label for="input5">5) Are you experiencing difficulty in breathing during a busy day?</label>
     <input type="text" class="form-control" id="input5" name="INPUT5">
   </div>
   <div class="form-group">
-    <label for="input6">6) Do you have trouble concentrating on one aspect for too long? </label>
+    <label for="input6">6) Are you experiencing chest pain or palpitations while engaging yourself in physical activities?</label>
     <input type="text" class="form-control" id="input6" name="INPUT6">
   </div>
   <div class="form-group">
-    <label for="input7">7) Are you experiencing growth of facial hair?</label>
+    <label for="input7">7) Are you feeling nauseous in closed environments?</label>
     <input type="text" class="form-control" id="input7" name="INPUT7">
   </div>
-  <p style="font-size:22px; text-align:left">DISCLAIMER</p>
+  <p style="font-size:22px">DISCLAIMER</p>
   <p>*This website disclaimer is a legal notice which provides that the result evaluated is not intended or implied to be a substitute for professional medical advice, diagnosis or treatment.</p>
   <div class="text-center">
   <button type="button" class="btn btn-primary" id="button" onclick=calculate()>Assess</button></div><br><br>
@@ -163,9 +166,11 @@ p{
 
         <div class="alert alert-danger" role="alert" id="al3"></div>
  </div>
+ 
 
-
+</div>
 </form>
+
 <script type="text/javascript">
      function calculate()
      {
@@ -180,20 +185,20 @@ p{
  
 
                 var result = 0;
-               if(input1==="Yes")
-                result+=20;
+               if(input1=="Yes")
+                result+=15;
                if(input2=="Yes")
                 result+=25;
                if(input3=="Yes")
-                result+=25;
-               if(input4=="Yes")
                 result+=5;
+               if(input4=="Yes")
+                result+=15;
                if(input5=="Yes")
                 result+=10;
                if(input6=="Yes")
-                result+=5;
+                result+=20;
                if(input7=="Yes")
-                result+=10;
+                result+=20;
            
        
             if(input1 == ""||input2 == ""||input3 == ""||input4 == ""||input5 == ""||input5 == ""||input6== ""||input7 == "") {
@@ -212,15 +217,15 @@ p{
 
           if (result >= 0 && result <= 40)
                 document.getElementById("al1").innerHTML = "The result is low";
-            if (result >= 41 && result <= 60)
+            if (result >= 41 && result <= 70)
                 document.getElementById("al2").innerHTML = "The result is medium";
-            if (result >= 61 && result <= 100)
+            if (result >= 71 && result <= 110)
                 document.getElementById("al3").innerHTML = "The result is high";
 
        }
    
        </script>
-</div>
+
 
 </body>
 </html>
